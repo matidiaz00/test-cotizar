@@ -1,0 +1,74 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::selection {
+    background: $primary;
+    color: $white;
+}
+
+h1 {
+	font-size: $title-base-size;
+	@include media-breakpoint-up(sm) {
+		font-size: 72px;
+	}
+}
+
+h2,
+h3 {
+	font-size: $title-base-size;
+	@include media-breakpoint-up(sm) {
+		font-size: 48px;
+	}
+}
+
+.btn {
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+    }
+    &.btn-link {
+        text-transform: unset;
+    }
+    &.btn-outline-white {
+        @include button-outline-variant($white, $primary, $white, $white);
+    }
+    &.disabled,
+    &:disabled {
+        opacity: 1;
+    }
+}
+
+.bg-gradient {
+    background: $primary;
+    background: -moz-linear-gradient(-45deg, $primary 1%, $secondary 100%);
+    background: -webkit-linear-gradient(-45deg, $primary 1%,$secondary 100%);
+    background: linear-gradient(135deg, $primary 1%,$secondary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='$secondary',GradientType=1 );
+    @include media-breakpoint-down(sm) {
+        background: $secondary !important;
+    }
+}
+
+.outline-0,
+.outline-0:focus,
+.outline-0:hover,
+.outline-0:active {
+    outline: 0 !important;
+}
+
+.money-dolar::before {
+    content: "$";
+    margin-right: 7px;
+}
+
+.money-euro::before {
+    content: "$";
+    margin-right: 7px;
+}

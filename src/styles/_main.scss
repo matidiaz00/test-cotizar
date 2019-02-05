@@ -1,0 +1,26 @@
+/*
+body::before {
+    content: "";
+    background: $primary;
+    background: -moz-linear-gradient(-45deg, $primary 0%, $info 50%, $success 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$primary), color-stop(50%,$info), color-stop(100%,$success));
+    background: -webkit-linear-gradient(-45deg, $primary 0%,$info 50%,$success 100%);
+    background: -o-linear-gradient(-45deg, $primary 0%,$info 50%,$success 100%);
+    background: -ms-linear-gradient(-45deg, $primary 0%,$info 50%,$success 100%);
+    background: linear-gradient(135deg, $primary 0%,$info 50%,$success 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='$success',GradientType=1 );
+
+    height: 120% !important;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: fixed;
+}
+*/
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}

@@ -1,0 +1,84 @@
+<span id="first" class="anchor"></span>
+<section class="bg-primary text-white py-3 py-sm-5">
+  <form 
+    class="container py-3 py-sm-5"
+    (ngSubmit)="onSubmit(f)" 
+    #f="ngForm"
+  >
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h1 class="mb-1 text-uppercase">Lorem ipsum<br/> dolor</h1>
+      </div>
+      <div class="col-12 col-sm-6">
+        <input 
+          class="form-control form-control-lg w-100 text-center"
+          type="text"
+          placeholder="USD"
+          id="usd"
+          [ngModelOptions]="{ updateOn: 'blur' }"
+          [ngModel]="usdValue | currency: 'USD' : 'symbol-narrow' : '1.2-2'"
+          (ngModelChange)="usdValue=resetCurrency($event)"
+          name="usd"
+          #usd
+        >
+      </div>
+      <div class="col-12 col-sm-6">
+        <input 
+          class="form-control form-control-lg w-100 text-center bg-transparent" 
+          type="text" 
+          placeholder="EUR" 
+          readonly
+          id="eur"
+          [ngModelOptions]="{ updateOn: 'blur' }"
+          [ngModel]="eurValue | currency: 'EUR' : 'symbol-narrow' : '1.2-2'"
+          (ngModelChange)="eurValue=resetCurrency($event)"
+          name="eur"
+          #eur
+        >
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button 
+          type="submit" 
+          class="btn btn-outline-light"
+          [disabled]="!f.form.valid"
+        >Calculate</button>
+      </div>
+      <!--
+      <div class="col-12 col-sm-6">
+        <input 
+          class="display-4 text-center bg-transparent border-0 text-white w-100"
+          type="text"
+          placeholder="USD"
+          id="usd"
+          [ngModelOptions]="{ updateOn: 'blur' }"
+          [ngModel]="usdValue | currency: 'USD' : 'symbol-narrow' : '1.2-2'"
+          (ngModelChange)="usdValue=resetCurrency($event)"
+          name="usd"
+          #usd
+        >
+      </div>
+      <div class="col-12 col-sm-6">
+        <input 
+          class="display-4 text-center bg-transparent border-0 text-white w-100" 
+          type="text" 
+          placeholder="EUR" 
+          readonly
+          id="eur"
+          [ngModelOptions]="{ updateOn: 'blur' }"
+          [ngModel]="eurValue | currency: 'EUR' : 'symbol-narrow' : '1.2-2'"
+          (ngModelChange)="eurValue=resetCurrency($event)"
+          name="eur"
+          #eur
+        >
+      </div>
+      <div class="col-12 text-center mt-3">
+        <button 
+          type="submit" 
+          class="btn btn-light"
+          [disabled]="!f.form.valid"
+        >Calculate</button>
+      </div>
+      -->
+    </div>
+  </form>
+</section>

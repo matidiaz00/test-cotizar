@@ -1,0 +1,17 @@
+<header class="bg-white fixed-top" [ngClass]="scrollTop ? '' : 'shadow'">
+  <div class="container d-flex" [ngClass]="scrollTop ? 'py-3 flex-column text-center' : 'py-2 justify-content-between align-items-center'">
+    <a href="#" (click)="scrollToTop()" [ngClass]="scrollTop ? 'mb-2 d-inline-block' : ''">
+      <img [ngStyle]="{'width': (scrollTop?100:50) +'px'}" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    </a>
+    <nav class="nav nav-pills nav-justified justify-content-center">
+      <a class="nav-link" href="#first">First</a>
+      <a class="nav-link" href="#second">Second</a>
+      <a class="nav-link" href="#third">Third</a>
+      <a class="nav-link" href="#fourth">Fourth</a>
+    </nav>
+  </div>
+</header>
+<!--
+<div [ngStyle]="{'margin-bottom': (scrollTop?205:80) +'px'}"></div>
+-->
+<div style="margin-bottom: 205px"></div>
