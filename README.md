@@ -1,6 +1,6 @@
 # Calculadora para cotizar euros y dolares echo en Angular
 
-Demo: https://matidiaz.com.ar/test/cotizar/dist
+Demo: http://matidiaz.com.ar/test/cotizar/dist
 
 ## Como correr la Web APP
 
